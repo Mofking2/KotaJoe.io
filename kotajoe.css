@@ -232,13 +232,13 @@ flex-direction:row;
 #cart{
 	margin-left:8%;
 }
-.btn1{
+.btn.btn1{
 	color:white;
 	font-weight:bold;
 	padding:4px;
 	font-size:12px;
 	background-color:#2F4858;
-	
+	opacity:1;
 	transition: all 0.3s ease-in-out;
 }
 .btn{
