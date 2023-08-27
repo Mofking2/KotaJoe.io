@@ -79,6 +79,15 @@ scroll-margin-block-start: 80px;
 .navbar-nav{
 	margin-left:auto;
 }
+.navbar-toggler {
+	border:3px solid white;
+	margin-right:0;
+	color:#800000;
+}
+
+.navbar-toggler-icon{
+	filter: invert(99%) sepia(99%) saturate(3%) hue-rotate(355deg) brightness(102%) contrast(100%);
+}
 
 .navbar.bgcolor{
 	background:#800000;
@@ -201,21 +210,56 @@ background-color:white;
 	
 }
 #padd{
-	float:right;
+	margin-left:18%;
 	background-color:#2F4858;
+}
+.flex{
+
+display:flex;
+flex-direction:row;
 
 }
-#btn{
+#selected {
+	float:right;
+	width:90%;
+}
+.cart{
+	text-decoration:none;
+	
+	border-radius:8px;
+	
+}
+#cart{
+	margin-left:8%;
+}
+.btn1{
+	color:white;
+	font-weight:bold;
+	padding:4px;
+	font-size:12px;
+	background-color:#2F4858;
+	
+	transition: all 0.3s ease-in-out;
+}
+.btn{
 	color:white;
 	font-weight:bold;
 	padding:2px;
 	font-size:12px;
 	background-color:#2F4858;
+	visibility:none;
+	opacity:0;
+	transition: all 0.3s ease-in-out;
 }
 #btn:hover{
 	color:#2F4858;
 	border:1px solid #2F4858;
 	background-color:white;
+	opacity:2;
+	
+}
+#selected{
+	font-weight:500;
 }
 #col{
 	display:flex;

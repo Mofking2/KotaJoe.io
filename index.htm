@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
 
 <div class="hero" id="hero">
 	
-	<div class="heroItems">
+	<div class="heroItems d-none d-lg-block ">
     <h1>Welcome to<small> KotaJoe</small></h1>
     <h6>served the freshest menyonyo, galamncwaaaaa!!</h6>
     <a class="BTM" href="#specials">Our specials</a>
@@ -37,36 +37,44 @@
 </div>
 
 <!--Menu Section-->
-<div class="mainContent p-3" id="menu">
+<div class="mainContent" id="menu">
 
 <div class="container text-center  p-3" id="MenuSection" >
+	<div class="row">
+<div class="flex cart ">
+		<p id ="selected"></p><a class="cart" href="cartDisplay.html" id =""><img id="" src="images/shppingbag.png" class="cart" width="20" height="" alt="..."></a><a class="cart" id="cartText" style="padding-top:0.5%; font-weight:bold;color:black;" href="cartDisplay.html" id ="">Cart&nbsp;</a><span id="" style="padding-top:0.5%; font-weight:bold;">0</span>
+		<span id="price" style="display:none" ></span>
+		<p class=" " id ="descrip"  style="display:none"></p>
+	</div>
+	</div>
+	
   <div class="row justify-content-evenly">
   
     <div class="col ">
-	
      <h5 class="subHeader rounded-pill">Menu</h5>
 	<div class="menuContent">
-	<ul class="list-group list-group-flush ">
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd" >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd" >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd" >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn" id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn " id="btn" style="" >place order</a></li>
+	<form>
+		<ul class="list-group list-group-flush ">
+		<li class="list-group-item " id = "prod" value ="14">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><button type="button" class="btn1  " id="btn" style="" value ="14" name="14randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="15">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R15</span><button type="button" class="btn  " id="btn" style="" value ="15"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="16">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R16</span><button type="button" class="btn  " id="btn" style=""  value ="16"  name="16randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="17">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R17</span><button type="button" class="btn  " id="btn" style="" value ="17" name="17randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="20">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R18</span><button type="button" class="btn  " id="btn" style="" value ="18"  name="18randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="21">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R16</span><button type="button" class="btn  " id="btn" style=""  value ="16"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="24">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><button type="button" class="btn  " id="btn" style="" value ="14" name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="28">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R28</span><button type="button" class="btn  " id="btn" style="" value ="28"  name="28randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="16">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R16</span><button type="button" class="btn  " id="btn" style=""  value ="16"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="30">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><button type="button" class="btn  " id="btn" style="" value ="30" name="30randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="33">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R15</span><button type="button" class="btn  " id="btn" style="" value ="15"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="16">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R16</span><button type="button" class="btn  " id="btn" style=""  value ="16"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="14">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><button type="button" class="btn  " id="btn" style="" value ="14" name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="39">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R39</span><button type="button" class="btn  " id="btn" style="" value ="39"  name="39randKota" Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="45">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R45</span><button type="button" class="btn  " id="btn" style=""  value ="45"  name="45randKota" >Add to cart</button></li>
+
 	</ul>
+	</form>
+	<div id="show">
+	</div>
 	</div>
     </div>
 	 <div class="row p- justify-content-start ">
@@ -91,7 +99,7 @@
 <!--Specials Section-->
 <div class="mainContent p-3" id="specials">
 
-<div class="container text-center  p-3" id="specialsSection" >
+<div class="container text-center  " id="specialsSection" >
   <div class="row">
   
     <div class="col">
@@ -165,7 +173,7 @@
  </div>
  <div class="col socials justify-content-evenly py-3">
  <h5 class="small" ><small>Social media  platforms</small></h5>
- <img src="images/mail.png" class="p-1" width="30" height="30" alt="..." style="filter: invert(100%) sepia(90%) saturate(1736%) hue-rotate(201deg) brightness(117%) contrast(104%);">
+ <img src="images/mail.png" class="p-1" width="s30" height="30" alt="..." style="filter: invert(100%) sepia(90%) saturate(1736%) hue-rotate(201deg) brightness(117%) contrast(104%);">
  <img src="images/facebook.png" class="p-2" width="30" height="30" alt="..." >
  <img src="images/twitter.png" class="p-2" width="30" height="30" alt="...">
  <img src="images/instagram.png" class="p-2" width="30" height="30" alt="...">
@@ -178,7 +186,11 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="graphics.js" ></script>	
+<script src="kotaJoe.js">
+
+
+</script>	
+
 	
   </body>
 </html>
