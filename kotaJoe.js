@@ -10,24 +10,89 @@ const element1 = document.querySelectorAll(".btn");
 	let item28 = [];
 	let item39 = [];
 	let item45 = [];
-	let val=[];
+	let items=
+	[
+	{
+			name:"tazz Kota",
+			price:14,
+			inCart:0 
+	
+	},
+	{
+			name:"corolla Kota",
+			price:15,
+			inCart:0
+
+	}
+	,
+	{
+			name:"langly KOta",
+			price:16,
+			inCart:0
+
+	},
+	{
+			name:"Corsa  Kota",
+			price:17,
+			inCart:0
+
+	},
+	{
+			name:"mini Cooper Kota",
+			price:18,
+			inCart:0
+
+	},
+	{
+			name:"Fiat Kota",
+			price:22,
+			inCart:0
+
+	},
+	{
+			name:"Audi Kota",
+			price:28,
+			inCart:0
+
+	},
+	{
+			name:"Bmw Kota",
+			price:35,
+			inCart:0
+
+	},
+	{
+			name:"MercedesBenz Kota",
+			price:39,
+			inCart:0
+
+	},
+	{
+			name:"RangeRover Kota",
+			price:45,
+			inCart:0
+
+	}
+];
 
 for ( const [index,item] of element1.entries()){
 	item.addEventListener("click", function(e){
 	e.preventDefault();
 		//console.log(item.value);
 		
-	console.log(index,item.value);
+	//console.log(index,item.value);
 	
 
 	
 	selected.innerHTML = "R" + item.value + " Kota is selected";
 	selected.style.color = "green";
 	
-	document.getElementById("descrip").innerHTML= val;
-	countItems();
+	//document.getElementById("descrip").innerHTML= val;
+	countItems(items[index]);
 	totalCost()
-	displayCart()
+	//displayCart()
+		 //displayCartItems()
+	
 });
 function refreshCartprice(){
 let itemNumber = localStorage.removeItem("totalCost");
@@ -39,19 +104,12 @@ let itemNumber = localStorage.removeItem("totalCost");
 }
 function refreshCart(){
 let itemNumber = localStorage.removeItem("cartItem");
-
+let items = localStorage.removeItem("itemsInCart");
 	//if(itemNumber){
 		//document.querySelector(".flex span").textContent = itemNumber;
 	//}
 }
-function load(){
-let itemNumber = localStorage.getItem("cartItem");
 
-if(itemNumber){
-	
-		document.querySelector(".flex span").textContent = itemNumber;
-	}
-}
 
 function loadingprice(){
 let itemNumber = localStorage.getItem("totalCost");
@@ -60,12 +118,20 @@ if(itemNumber){
 		
 		document.querySelector(".flex #price").textContent =itemNumber;
 	}
+
+let item = localStorage.getItem("cartItem");
+
+if(item){
+	
+		document.querySelector(".flex span").textContent = item;
+	}
 }
 
 
 
 
-function countItems(){
+function countItems(items){
+	console.log('item clickd',items)
 	let itemNumber = localStorage.getItem("cartItem");
 	
 	itemNumber = parseInt(itemNumber)
@@ -80,9 +146,64 @@ function countItems(){
 		document.querySelector(".flex span").textContent=1;
 	}
 	
-	
+	setitemsInCArt(items);
 }
 
+	function setitemsInCArt(items){
+		let cartItems = localStorage.getItem("itemsInCart");
+			cartItems = JSON.parse(cartItems)
+		console.log("My card items",cartItems)
+		
+	if(cartItems != null){
+		if(cartItems[items.name] == undefined){
+			cartItems = {
+				...cartItems,
+				[items.name]:items
+	
+			}
+		}
+		cartItems[items.name].inCart += 1
+	
+	} else {
+	
+			items.inCart =1;
+			cartItems = {
+			[items.name]:items
+	
+			}
+	}
+	
+	
+	localStorage.setItem("itemsInCart", JSON.stringify(cartItems))
+	}
+	
+	
+function displayCartItems(){
+					let itemsInCart = localStorage.getItem("itemsInCart")	
+					itemsInCart = JSON.parse(itemsInCart)
+					
+					
+					
+					let containerDis = document.querySelector(".neo")
+				
+				if(itemsInCart &&containerDis){
+					containerDis.innerHTML = "";
+					console.log("running")	
+						Object.values(itemsInCart).map(item =>{
+							containerDis.innerHTML +=`
+							<div class="items">
+								<p>${item.inCart} ${item.name} of price R${item.price} </p>
+							</div>
+							` 
+						
+					});
+					
+				}
+					//containerDis.textContent = itemsInCart.name;
+					
+			
+				
+}
 function totalCost(){
 	let itemNumber = localStorage.getItem("totalCost");
 	console.log("here",itemNumber)
@@ -106,68 +227,16 @@ function totalCost(){
 	
 }
 
-function displayCart(){
-		let itemsIn =  localStorage.getItem("kotas")
-		
-	var name = item.value
-	
-	if(itemsIn ){
-		Itemll.push(name)
-		console.log("Selected Kota price222 "+Itemll)
-		localStorage.setItem("kotas", itemsIn + name)
-		//document.querySelector(".flex  #descrip").textContent = Itemll.length;
-	console.log(Itemll, "moere")
-	} else {
-		localStorage.setItem("kotas", itemsIn)
-	}
-	console.log(Itemll)
-		
 
-	if (name == "14")
-	{
-		item14.push(name)
-			document.querySelector(".flex  #descrip").textContent= item14;
-	} else if (name == "15")
-	{
-		item15.push(name)
-			document.querySelector(".flex #descrip").textContent= item15;
-	}else if (name == "16")
-	{
-		item16.push(name)
-			document.querySelector(".flex #descrip").textContent= item16;
-	}else if (name == "17")
-	{
-		item17.push(name)
-			document.querySelector(".flex #descrip").textContent= item17;
-	}else if (name == "18")
-	{
-		item18.push(name)
-			document.querySelector(".flex #descrip").textContent= item18;
-	}else if (name == "28")
-	{
-		item28.push(name)
-			document.querySelector(".flex #descrip").textContent= item28;
-	}else if (name == "39")
-	{
-		item39.push(name)
-			document.querySelector(".flex #descrip").textContent= item39;
-	}else if (name == "45")
-	{
-		item45.push(name)
-			document.querySelector(".flex #descrip").textContent= item45;
-	}
-	
-	
-	
-	
+
+
+
+
 }
-load()
-
 loadingprice()
-refreshCart() 
+
 refreshCartprice()
-}
-		//location.href = 'confirmOrder.htm';
+displayCartItems()	//location.href = 'confirmOrder.htm';
 	
-	
+refreshCart() 
 
