@@ -1,0 +1,26 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(bodyParser.json());
+
+const orders = [];
+
+app.post('/placeOrder', (req, res) => {
+  const { productName, quantity } = req.body;
+
+  if (!productName || !quantity) {
+    return res.status(400).json({ message: 'Product name and quantity are required.' });
+  }
+
+  const order = { productName, quantity };
+  orders.push(order);
+
+  return res.json({ message: 'Order placed successfully!', order });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
