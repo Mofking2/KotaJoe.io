@@ -198,6 +198,21 @@ background-color:white;
 }
 .badge
 /**/
+.breadcrumb-item,a{
+
+	color:#000000;
+	font-weight:600;
+}
+.breadcrumb-item.active{
+
+	color:#800000;
+	font-weight:600;
+}
+.breadcrumb{
+margin-left:0.3%;
+margin-top:1.1%;
+
+}
 .border:hover{
 	box-shadow: rgba(100, 100, 90, 0.3) 0px 7px 29px 0px;
 
