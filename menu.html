@@ -5,62 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>kota joe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<link href="menu.css" rel="stylesheet">
+	<link href="kotajoe.css" rel="stylesheet">
   </head>
   <nav class="navbar bgcolor sticky-top navbar-expand-lg " >
   <div class="container ">
     <a class="navbar-brand nav-link" id="logoDiv" href="index.htm"><img id="logo"src="images/pngegg.png" class="" width="" height="" alt="..."><b>KotaJoe</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
    
-
   </div>
 </nav>
 
 <body>
 
 
+
 <!--Menu Section-->
-<div class="mainContent p-3" id="menu">
+<div class="mainContent" id="menu">
 
 <div class="container text-center  p-3" id="MenuSection" >
+	<div class="row">
+<div class="flex cart ">
+		<p id ="selected"></p><a class="cart" href="cartDisplay.html" id =""><img id="" src="images/shppingbag.png" class="cart" width="20" height="" alt="..."></a><a class="cart" id="cartText" style="padding-top:0.5%; font-weight:bold;color:black;" href="cartDisplay.html" id ="">Cart&nbsp;</a><span id="" style="padding-top:0.5%; font-weight:bold;">0</span>
+		<span id="price" style="display:none" ></span>
+		<p class=" " id ="descrip"  style=""></p>
+	</div>
+	</div>
+	
   <div class="row justify-content-evenly">
   
     <div class="col ">
-	
      <h5 class="subHeader rounded-pill">Menu</h5>
 	<div class="menuContent">
-	<ul class="list-group list-group-flush ">
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd" >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd" >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd" >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn  " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn" id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn " id="btn" style="" >place order</a></li>
-	  <li class="list-group-item ">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><a class="btn " id="btn" style="" >place order</a></li>
+	<form>
+		<ul class="list-group list-group-flush ">
+		<li class="list-group-item " id = "prod" value ="14">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><button type="button" class="btn btn1  " id="btn" style="" value ="14" name="14randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="15">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R15</span><button type="button" class="btn  " id="btn" style="" value ="15"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="16">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R16</span><button type="button" class="btn  " id="btn" style="" value ="15"  name="16randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="17">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R17</span><button type="button" class="btn  " id="btn" style="" value ="17" name="17randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="20">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R18</span><button type="button" class="btn  " id="btn" style="" value ="18"  name="18randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="21">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R16</span><button type="button" class="btn  " id="btn" style=""  value ="16"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="24">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><button type="button" class="btn  " id="btn" style="" value ="14" name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="28">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R28</span><button type="button" class="btn  " id="btn" style="" value ="28"  name="28randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="16">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R16</span><button type="button" class="btn  " id="btn" style=""  value ="16"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="30">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><button type="button" class="btn  " id="btn" style="" value ="30" name="30randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="33">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R15</span><button type="button" class="btn  " id="btn" style="" value ="15"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="16">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R16</span><button type="button" class="btn  " id="btn" style=""  value ="16"  name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="14">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R14</span><button type="button" class="btn  " id="btn" style="" value ="14" name="15randKota" >Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="39">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R39</span><button type="button" class="btn  " id="btn" style="" value ="39"  name="39randKota" Add to cart</button></li>
+		<li class="list-group-item " id = "prod" value ="45">An itemA + second itemA + second itemA + second itemA + second itemA + second <span class="badge rounded-pill " id="padd"  >R45</span><button type="button" class="btn  " id="btn" style=""  value ="45"  name="45randKota" >Add to cart</button></li>
+
 	</ul>
+	</form>
+	<div id="show">
+	</div>
 	</div>
     </div>
-	 <div class="row p-3 justify-content-start ">
-		<h6 class="extras">Extras</h6>
-		 <div class="col ">
-			text here
+	 <div class="row p- justify-content-start ">
 		
-		</div>
-		<div class="col" id="col">
-			text here
-		
-		</div>
 	</div>
 		
     </div>
@@ -73,44 +76,21 @@
 <!--Specials Section-->
 <div class="mainContent p-3" id="specials">
 
-<div class="container text-center  p-3" id="specialsSection" >
+<div class="container text-center  " id="specialsSection" >
   <div class="row">
   
-    <div class="col">
+
 	
      <h5 class="subHeaderSpec rounded-pill">Our specials</h5>
 	<h6 class="" style=""><small>Latest specials</small></h6>
-		<div class="gallery">
-				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-				  <div class="carousel-inner gallery">
-					<div class="carousel-item active " data-bs-interval="3200">
-					  <img src="images/pngegg.png" class="imge" width="" height="200" alt="...">
-					  <a class="btn " id="btn" style="" >place order</a>
-					</div>
-					<div class="carousel-item" data-bs-interval="3200">
-					  <img src="images/pngegg.png" class="imge" width="" height="200" alt="...">
-					  <a class="btn " id="btn" style="" >place order</a>
-					</div>
-					<div class="carousel-item" data-bs-interval="3200">
-					  <img src="images/pngegg.png" class="imge" width="" height="200" alt="...">
-					  <a class="btn " id="btn" style="" >place order</a>
-					</div>
-					<div class="carousel-item" data-bs-interval="3200">
-					  <img src="images/pngegg.png" class="imge " width="" height="200" alt="...">
-					  <a class="btn " id="btn" style="" >place order</a>
-					</div>
-					<div class="carousel-item" data-bs-interval="3200" >
-					  <img src="images/pngegg.png" class="imge" id="image"width="" height="200" alt="...">
-					  <button class="btn specials " id="btn" style="" >place order</>
-					</div>
-				  </div>
-				</div>
-		</div>
+
 	</div>
 
 	</div>
 
 <!--end of specials Section-->
+
+
 
 </div>
 <div class="container-fluid	footer justify-content-evenly  ">
@@ -125,7 +105,7 @@
  </div>
  <div class="col socials justify-content-evenly py-3">
  <h5 class="small" ><small>Social media  platforms</small></h5>
- <img src="images/mail.png" class="p-1" width="30" height="30" alt="..." style="filter: invert(100%) sepia(90%) saturate(1736%) hue-rotate(201deg) brightness(117%) contrast(104%);">
+ <img src="images/mail.png" class="p-1" width="s30" height="30" alt="..." style="filter: invert(100%) sepia(90%) saturate(1736%) hue-rotate(201deg) brightness(117%) contrast(104%);">
  <img src="images/facebook.png" class="p-2" width="30" height="30" alt="..." >
  <img src="images/twitter.png" class="p-2" width="30" height="30" alt="...">
  <img src="images/instagram.png" class="p-2" width="30" height="30" alt="...">
@@ -138,7 +118,11 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="graphics.js" ></script>	
+<script src="kotaJoe.js">
+
+
+</script>	
+
 	
   </body>
 </html>
