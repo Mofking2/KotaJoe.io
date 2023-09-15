@@ -74,7 +74,13 @@ const element1 = document.querySelectorAll(".btn");
 
 	}
 ];
+const boxes = document.getElementsByClassName('items');
 
+for (const box of boxes) {
+  box.addEventListener('click', (event) => {
+    event.target.remove();
+  });
+}
 for ( const [index,item] of element1.entries()){
 	item.addEventListener("click", function(e){
 	e.preventDefault();
@@ -92,8 +98,23 @@ for ( const [index,item] of element1.entries()){
 	totalCost()
 	//displayCart()
 		 //displayCartItems()
+		
 	
 });
+
+
+		
+function remove_item(selected_item) {
+        selected_item.parentNode.removeChild(selected_item);
+		
+    }
+
+	function date(){
+		const myDate = d = new Date();
+		
+		const date = myDate.toUTCString()
+		document.getElementById("date").textContent =date;
+	}
 function refreshCartprice(){
 let itemNumber = localStorage.removeItem("totalCost");
 
@@ -191,9 +212,9 @@ function displayCartItems(){
 					console.log("running")	
 						Object.values(itemsInCart).map(item =>{
 							containerDis.innerHTML +=`
-							<div class="items">
-								<p>${item.inCart} ${item.name} of price R${item.price} </p>
-							</div>
+							<ul class="items">
+								<li class="item" onclick="remove_item(this)">${item.inCart} X ${item.name} of price<b> R</b>  ${item.price}  <button type="button" class="close" >x</button></li>
+							</ul>
 							` 
 						
 					});
@@ -237,6 +258,8 @@ loadingprice()
 
 refreshCartprice()
 displayCartItems()	//location.href = 'confirmOrder.htm';
+	refreshCart()
+
 	
-refreshCart() 
+	date()
 
